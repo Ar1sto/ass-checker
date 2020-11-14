@@ -4,11 +4,9 @@
 import sys
 import os
 import time
-import threading
 import requests
 import random
 import whois
-import getopt
 from colorama import Fore, Style
 
 r = random.randint(2,5)
