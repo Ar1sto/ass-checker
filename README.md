@@ -98,6 +98,7 @@ ASS-Checker zeigt ihnen Informationen zum Server im JSON-Format an....
 }
 
 ausserdem speichert ASS-Checker gefundene Subdomains in die Textdatei "ass-checker.txt"
-Achten sie darauf das diese Datei nach jeden erneuten ausführen des Scripts geleert wird! 
+
+! Achten sie darauf dass sich die Datei (ass-checker.txt) nach jeden erneuten ausführen des Scripts selbständig entleert und somit vorherige gefundene Subdomains gelöscht sind! 
 
 Happy Hacking und Viel Spaß. Danke das du ASS-Checker ausprobiert hast.
