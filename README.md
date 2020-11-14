@@ -22,7 +22,7 @@ Linux/Debian: sudo pip3 install requests colorama whois
 BEDIENUNG:
 --------------------
 Führen sie das Script im Terminal aus...
->python3 ass-checker.py 
+>sudo python3 ass-checker.py 
 
 Geben sie ein Host an: (Host ist der Server auf dem die Domain zugewiesen ist, in dem Beispiel die Domain google.com) | IP-Adressen oder die Protokollbezeichnung (https://) ist nicht nötig.
 >google.com
