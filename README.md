@@ -21,9 +21,8 @@ Linux/Debian: sudo pip3 install requests colorama whois
 
 BEDIENUNG:
 --------------------
-...      __________________________________________________________________________
-        |      -DOMAIN-      |   |     -IPv4-     |      |         -IPv6-          |
- Example:     google.com     |NOT| 216.58.205.238 |OR NOT| 2a00:1450:4001:81e::200e
+Führen sie das Script im Terminal aus...
+>python3 ass-checker.py 
 
 Geben sie ein Host an: (Host ist der Server auf dem die Domain zugewiesen ist, in dem Beispiel die Domain google.com) | IP-Adressen oder die Protokollbezeichnung (https://) ist nicht nötig.
 >google.com
@@ -98,6 +97,7 @@ ASS-Checker zeigt ihen Informationen zum Server im JSON-Format an....
   "country": "US"
 }
 
-ausserdem speichert ASS-Checker gefundene Subdoamin in die Textdatei "ass-checker.txt"
+ausserdem speichert ASS-Checker gefundene Subdomains in die Textdatei "ass-checker.txt"
+Achten sie darauf das diese Datei nach jeden erneuten ausführen des Scripts geleert wird! 
 
 Happy Hacking und Viel Spaß. Danke das du ASS-Checker ausprobiert hast.
