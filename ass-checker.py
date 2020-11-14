@@ -125,7 +125,7 @@ for sline in slist:
         sdlist.write("\n[+] " + (subhost))
 print (Fore.WHITE + "+------------------------------------------------+")
 print (Fore.WHITE + "\n[+] Liste wurde abgearbeitet.\n")
-print (Fore.YELLOW + f"[INFO] Die gefundene Subdomains sind in 'ass-checker.txt' gespeichert.")
+print (Fore.YELLOW + f"[INFO] Die gefundenen Subdomains sind in 'ass-checker.txt' gespeichert.")
 print (Style.BRIGHT+Fore.WHITE + "\n[*] Danke dass du "+Fore.BLUE+"A"+Fore.YELLOW+"S"+Fore.RED+"S"+Style.BRIGHT+Fore.WHITE+"-Checker benutzt hast.")
 sdlist.close()
 sys.exit()
