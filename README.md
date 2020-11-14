@@ -36,7 +36,7 @@ Geben sie eine Subdomain-liste an: [default=subdomains.txt]  (Hier wird gefragt 
 Zusatzinfo's
 ----------------
 
-ASS-Checker zeigt ihen Informationen zum Server im JSON-Format an....
+ASS-Checker zeigt ihnen Informationen zum Server im JSON-Format an....
 
 
 {
