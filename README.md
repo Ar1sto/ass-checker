@@ -1,12 +1,14 @@
 #ASS-Checker by Ar1st0
 
+![ASS-Checker - Version 1.0 Menü](https://github.com/Ar1sto/ass-checker/blob/main/assicon.ico)
+
 Es handelt sich um ein sehr einfachen und simplen Subdomain scanner der neben den suchen von Subdomains auch allgemeine Informationen zum Host gibt.
 Dies ist die erste richtige Version (Insgesamt Version 2.1.1). Ich möchte gerne noch mehr Funktionen hinzufügen daher wäre Rückmeldung zu
 der bedienlichkeit, Bugs, und generell konstruktive Kritik sehr hilfreich.
 Aber fürs erste ist die Main-Funktion vorhanden...einen einfachen und simplen Subdomain-scanner deren Bedienung sich fast von selbst erklärt. alles was du tun musst
 ist es den beispielen zu folgen und wissen welche Domain du auswählst um nach subdomains zu suchen.
 
-MODULE:
+MODULEs:
 --------------------
 Das Python-Script das in Python3 geschrieben ist benötigt folgende Module...
 
