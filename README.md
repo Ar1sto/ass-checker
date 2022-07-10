@@ -8,7 +8,7 @@ der bedienlichkeit, Bugs, und generell konstruktive Kritik sehr hilfreich.
 Aber für's erste ist die Main-Funktion vorhanden...einen einfachen und simplen Subdomain-scanner deren Bedienung sich fast von selbst erklärt. Alles was du tun musst
 ist es den beispielen zu folgen und wissen welche Domain du auswählst um nach Subdomains zu suchen.
 
-MODULEs:
+MODULES:
 --------------------
 Das Python-Script das in Python3 geschrieben ist benötigt folgende Module...
 
