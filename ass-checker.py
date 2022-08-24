@@ -27,8 +27,8 @@ def banner():
         | $$  | $$|  $$$$$$/|  $$$$$$/        |  $$$$$$/| $$  | $$|  $$$$$$$|  $$$$$$$| $$ \  $$|  $$$$$$$| $$      
         |__/  |__/ \______/  \______/          \______/ |__/  |__/ \_______/ \_______/|__/  \__/ \_______/|__/  V2.1.1
         ___________________________________________________________________________________________________________
-                                            Ar1st0’s-Simple-Subdomain-Checker 
-                                                            |                                                   ''') 
+                                            Ar1st0’s-Simple-Subdomain-Checker
+                                                            |                                                   ''')
     print (Style.DIM+Fore.GREEN+ "                                                         {v1.0}                       ")
     print (Style.RESET_ALL)
 banner()
@@ -41,9 +41,9 @@ def clear():
 def hostabfrage():
     global thost
     print (Style.RESET_ALL)
-    print ("""       __________________________________________________________________________)
-                    |      -DOMAIN-      |   |     -IPv4-     |      |         -IPv6-          |
-             Example:     google.com     |NOT| 216.58.205.238 |OR NOT| 2a00:1450:4001:81e::200e\n""")
+    print ("""              __________________________________________________________________________
+             |      -DOMAIN-      |   |     -IPv4-     |      |         -IPv6-          |
+      Example:     google.com     |NOT| 216.58.205.238 |OR NOT| 2a00:1450:4001:81e::200e|\n""")
     thost = str(input(Fore.WHITE + "Geben sie eine Domain an:\n>"))
     if thost == "":
        print (Fore.RED+"\nGeben sie eine Domain an.\n")
@@ -107,11 +107,11 @@ print (Fore.YELLOW + "\n[INFO] Whois-Informationen zu: " +thost)
 print (Style.RESET_ALL)
 wd = os.system(f"whois {thost}")
 print (wd)
-print (Fore.YELLOW + "\n[INFO] Scan nach Subdomains startet jetzt...")
-print (Fore.WHITE + "+------------------------------------------------+")
+print (Fore.YELLOW + "\n[INFO] Überprüfung und Scan der Subdomains startet jetzt...")
+print (Fore.WHITE + "+---------------------------------------------------------+")
 time.sleep(r)
-print (Style.RESET_ALL)
 http = str("http://")
+print(Style.RESET_ALL)
 
 def process():
     load_str = "Subdomains werden ermittelt... "
@@ -132,6 +132,32 @@ def process():
         anicount = (anicount + 1)% 4
         i =(i + 1)% ls_len # i+=1 % ls_len
         counttime = counttime + 1
+
+
+def checkwildcard():
+    wilddomains = open("checkwildcardusing.txt", "r+")
+    wildr = wilddomains.read()
+    wildline = wildr.splitlines()
+    print ("[+] Überprüfung auf Wildcard-Techniken...\n")
+    for sline in wildline:
+        time.sleep(0.25)
+        wildsubhost = f"{sline}.{thost}"
+        try:
+            requests.get(http+sline+pt+thost)
+        except requests.ConnectionError:
+            print (Style.BRIGHT+Fore.GREEN+f'[*] "{sline}" wurde nicht gefunden. Ein gutes Zeichen!')
+        except KeyboardInterrupt:
+            print (Fore.RED+"[+] Programm wird beendet...")
+            sys.exit(3)
+        else:
+            print (Style.BRIGHT+Fore.RED+f'[*] "{sline}" als Subdomain gefunden. Sehr wahrscheinlich wird eine Wildcard für Subdomains verwendet.')
+    afterask = input(Style.RESET_ALL+"\n[.] Möchtest du den Hauptscan starten? [y/n] ")
+    if afterask == "y" or afterask == "j" or afterask == "ja" or afterask == "yes":
+        print (Style.RESET_ALL+"\n\t[*] Hauptscan wird fortgesetzt...\n")
+    else:
+        print (Style.RESET_ALL+"[i] Auf Wiedersehen.")
+        sys.exit(3)
+checkwildcard()
 
 for sline in slist:
     time.sleep(0.25)
